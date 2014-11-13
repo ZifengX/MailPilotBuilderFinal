@@ -75,13 +75,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\images\atlas.png" />
     <Content Include="css\app.css" />
     <Content Include="css\normalize.css" />
-    <Content Include="images\cloud.png" />
-    <Content Include="images\island.png" />
-    <Content Include="images\loading.jpg" />
-    <Content Include="images\ocean.gif" />
-    <Content Include="images\plane.png" />
+    <Content Include="assets\images\cloud.png" />
+    <Content Include="assets\images\island.png" />
+    <Content Include="assets\images\loading.jpg" />
+    <Content Include="assets\images\ocean.gif" />
+    <Content Include="assets\images\plane.png" />
     <Content Include="Scripts\filters\AlphaMapFilter.js" />
     <Content Include="Scripts\filters\AlphaMaskFilter.js" />
     <Content Include="Scripts\filters\BoxBlurFilter.js" />
@@ -99,7 +100,7 @@
     <Content Include="Scripts\lib\soundjs-0.5.2.min.js" />
     <Content Include="Scripts\lib\tweenjs-0.5.1.min.js" />
     <None Include="Scripts\_references.js" />
-    <Content Include="sounds\yay.ogg" />
+    <Content Include="assets\sounds\yay.ogg" />
     <Content Include="packages.config" />
     <Content Include="Scripts\lib\jquery-2.1.1.min.map" />
     <None Include="Web.Debug.config">
@@ -111,15 +112,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
-    <Content Include="sounds\bi.wav" />
-    <Content Include="sounds\biu.wav" />
+    <Content Include="assets\sounds\bi.wav" />
+    <Content Include="assets\sounds\biu.wav" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Scripts\managers\" />
     <Folder Include="Scripts\states\" />
   </ItemGroup>
   <ItemGroup>
@@ -130,7 +130,9 @@
     <TypeScriptCompile Include="Scripts\lib\preloadjs.d.ts" />
     <TypeScriptCompile Include="Scripts\lib\soundjs.d.ts" />
     <TypeScriptCompile Include="Scripts\lib\tweenjs.d.ts" />
+    <TypeScriptCompile Include="Scripts\managers\assets.ts" />
     <TypeScriptCompile Include="Scripts\objects\cloud.ts" />
+    <TypeScriptCompile Include="Scripts\objects\gameobject.ts" />
     <TypeScriptCompile Include="Scripts\objects\island.ts" />
     <TypeScriptCompile Include="Scripts\objects\ocean.ts" />
     <TypeScriptCompile Include="Scripts\objects\plane.ts" />
