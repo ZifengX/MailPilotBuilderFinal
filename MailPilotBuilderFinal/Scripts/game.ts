@@ -1,10 +1,11 @@
 ﻿/// <reference path="constants.ts" />
+/// <reference path="objects/plane.ts" />
 
 var stage: createjs.Stage;
 var queue;
 
 //Game Objects
-var plane: Plane;
+var plane: objects.Plane;
 var island: Island;
 var ocean: Ocean;
 var scoreboard: Scoreboard;
@@ -52,30 +53,7 @@ function gameLoop(event): void {
     stage.update();
 }
 
-//plane class
-class Plane {
-    image: createjs.Bitmap;
-    width: number;
-    height: number;
-    constructor() {
-        this.image = new createjs.Bitmap(queue.getResult("plane"));
-        this.width = this.image.getBounds().width;
-        this.height = this.image.getBounds().height;
 
-        //define the middle of the plane
-        this.image.regX = this.width * 0.5;
-        this.image.regY = this.height * 0.5;
-        this.image.y = 430;
-
-        stage.addChild(this.image);
-        //play engine sound forever
-        createjs.Sound.play("biu", 0, 0, 0, -1, 1, 0);
-    }
-
-    update() {
-        this.image.x = stage.mouseX;
-    }
-}
 
 //island class
 class Island {
@@ -270,7 +248,7 @@ function gameStart(): void {
     
     ocean = new Ocean();
     island = new Island();
-    plane = new Plane();
+    plane = new objects.Plane();
     // cloud = new Cloud();
     for (var count = 0; count < constants.CLOUD_NUM; count++) {
         clouds[count] = new Cloud();
