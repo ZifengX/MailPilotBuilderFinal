@@ -113,35 +113,25 @@
     <Content Include="index.html" />
     <Content Include="sounds\bi.wav" />
     <Content Include="sounds\biu.wav" />
-    <None Include="v8\Noesis.Javascript.x64.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="v8\Noesis.Javascript.x86.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="assets\" />
-    <Folder Include="fonts\" />
+    <Folder Include="Scripts\managers\" />
+    <Folder Include="Scripts\objects\" />
+    <Folder Include="Scripts\states\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Scripts\constants.ts" />
     <TypeScriptCompile Include="Scripts\game.ts" />
     <TypeScriptCompile Include="Scripts\lib\createjs-lib.d.ts" />
     <TypeScriptCompile Include="Scripts\lib\easeljs.d.ts" />
     <TypeScriptCompile Include="Scripts\lib\preloadjs.d.ts" />
     <TypeScriptCompile Include="Scripts\lib\soundjs.d.ts" />
     <TypeScriptCompile Include="Scripts\lib\tweenjs.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\createjs-lib\createjs-lib.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\createjs\createjs.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\easeljs\easeljs.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\preloadjs\preloadjs.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\soundjs\soundjs.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\tweenjs\tweenjs.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,4 +1,6 @@
-﻿var stage: createjs.Stage;
+﻿/// <reference path="constants.ts" />
+
+var stage: createjs.Stage;
 var queue;
 
 //Game Objects
@@ -11,12 +13,6 @@ var scoreboard: Scoreboard;
 //Cloud Array
 var clouds = [];
 
-
-//Game constants
-var CLOUD_NUM: number = 3;
-var GAME_FONT: string = "40px Consolas";
-var FONT_COLOUR: string = "#FFFF00";
-var PLAYER_LIVES: number = 3;
 
 function preload(): void {
     queue = new createjs.LoadQueue();
@@ -47,7 +43,7 @@ function gameLoop(event): void {
     island.update();
     plane.update();
    // cloud.update();
-    for (var count = 0; count < CLOUD_NUM; count++) {
+    for (var count = 0; count < constants.CLOUD_NUM; count++) {
         clouds[count].update();
     }
 
@@ -240,7 +236,7 @@ function planeAndCloud(theCloud:Cloud) {
 //Collision Check utility function
 function collisionCheck() {
     planeAndIsland();
-    for (var count = 0; count < CLOUD_NUM; count++) {
+    for (var count = 0; count < constants.CLOUD_NUM; count++) {
         planeAndCloud(clouds[count]);
     }
 }
@@ -248,12 +244,12 @@ function collisionCheck() {
 class Scoreboard {
     label: createjs.Text;
     labelString: string= "";
-    lives: number = PLAYER_LIVES;
+    lives: number = constants.PLAYER_LIVES;
     score: number = 0;
     width: number;
     height: number;
     constructor() {       
-        this.label = new createjs.Text(this.labelString, GAME_FONT, FONT_COLOUR);
+        this.label = new createjs.Text(this.labelString, constants.GAME_FONT, constants.FONT_COLOUR);
         this.update();
         this.width = this.label.getBounds().width;
         this.height = this.label.getBounds().height;
@@ -276,7 +272,7 @@ function gameStart(): void {
     island = new Island();
     plane = new Plane();
     // cloud = new Cloud();
-    for (var count = 0; count < CLOUD_NUM; count++) {
+    for (var count = 0; count < constants.CLOUD_NUM; count++) {
         clouds[count] = new Cloud();
     }
 
